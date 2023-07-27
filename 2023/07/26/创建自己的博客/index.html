@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="创建自己的博客, 狐狐小窝">
+    <meta name="keywords" content="利用Github搭建hexo博客, 狐狐小窝">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>创建自己的博客 | 狐狐小窝</title>
+    <title>利用Github搭建hexo博客 | 狐狐小窝</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -320,12 +320,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">创建自己的博客</h1>
+                    <h1 class="description center-align post-title">利用Github搭建hexo博客</h1>
                 </div>
             </div>
         </div>
@@ -439,12 +439,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/HTML/">
+                                <span class="chip bg-color">-HTML</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/HTML%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                HTML学习
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -469,12 +482,140 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2235973">主要参考</a></p>
+<h1 id="准备前提"><a href="#准备前提" class="headerlink" title="准备前提"></a>准备前提</h1><ol>
+<li><p>提前安装好(node.js)<a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a><br>Node.js 为大多数平台提供了官方的 <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">安装程序</a>。对于中国大陆地区用户，可以前往 <a target="_blank" rel="noopener" href="https://npmmirror.com/mirrors/node/">淘宝 Node.js 镜像</a> 下载。</p>
+<p>其它的安装方法：<img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307270920927.png" alt="image-20230726215816620"></p>
+</li>
+<li><p>提前安装好(GIt)<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>  并且根据需要选择安装版本</p>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307262200348.png" alt="image-20230726220018855"><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307262204462.png" alt="image-20230726220418059"></p>
+</li>
+<li><p>提前注册好一个Github账号，以下为注册界面（没有确认密码，请检查好自己的密码是否输入有误）<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271420367.png" alt="image-20230727141914380"></p>
+</li>
+<li><p>如果文章图片没有显示，请自行挂代理</p>
+</li>
+</ol>
+<h1 id="正片开始"><a href="#正片开始" class="headerlink" title="正片开始"></a>正片开始</h1><ol>
+<li><h5 id="在本地新建一个文件夹（在这里创建的是test文件夹）用于放博客源文件，路径不要有中文"><a href="#在本地新建一个文件夹（在这里创建的是test文件夹）用于放博客源文件，路径不要有中文" class="headerlink" title="在本地新建一个文件夹（在这里创建的是test文件夹）用于放博客源文件，路径不要有中文"></a>在本地新建一个文件夹（在这里创建的是<code>test</code>文件夹）用于放博客源文件，路径不要有<code>中文</code></h5></li>
+<li><h5 id="在创建的test文件夹中，在空白处右键点击Open-Git-Bash-Here"><a href="#在创建的test文件夹中，在空白处右键点击Open-Git-Bash-Here" class="headerlink" title="在创建的test文件夹中，在空白处右键点击Open Git Bash Here"></a>在创建的<code>test</code>文件夹中，在空白处右键点击<code>Open Git Bash Here</code></h5></li>
+<li><h5 id="使用npm命令安装Hexo，输入："><a href="#使用npm命令安装Hexo，输入：" class="headerlink" title="使用npm命令安装Hexo，输入："></a>使用npm命令安装Hexo，输入：</h5><blockquote>
+<p>npm install -g hexo-cli &#x2F;&#x2F;安装hexo<br>hexo init blog &#x2F;&#x2F;新建一个网站，并放在blog文件夹<br>cd blog  &#x2F;&#x2F;从当前文件夹进入blog文件夹<br>hexo g  &#x2F;&#x2F;既hexo generate的缩写，生成静态文件</p>
+</blockquote>
+<p>构建好的效果如下:</p>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307270940964.png" alt="image-20230727094006066"></p>
+</li>
+<li><h5 id="在Git中cd进入blog文件夹"><a href="#在Git中cd进入blog文件夹" class="headerlink" title="在Git中cd进入blog文件夹"></a>在<code>Git</code>中cd进入<code>blog</code>文件夹</h5><p>为了检测我们的网站雏形，分别按顺序输入以下三条命令：</p>
+<blockquote>
+<p>hexo new test_my_site  &#x2F;&#x2F;新建一个标题为“test_my_site”的文章<br>hexo g &#x2F;&#x2F;生成静态文件<br>hexo s &#x2F;&#x2F;即hexo server的缩写，启动服务预览<br>之后在浏览器访问127.0.0.1:4000访问blog了，如需停止服务则按下Ctrl+C</p>
+</blockquote>
+</li>
+<li><h5 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h5><blockquote>
+<p>cd ~&#x2F;.ssh  &#x2F;&#x2F;检查本机已存在的ssh密钥</p>
+</blockquote>
+<ul>
+<li>提示：如果显示No such file or directory 则说明你是第一次使用Git。</li>
+</ul>
+<blockquote>
+<p>ssh-keygen -t rsa -C “邮件地址”  &#x2F;&#x2F;该邮箱地址为你的Github注册的邮箱地址</p>
+</blockquote>
+<ul>
+<li>然后连续3次回车，最终会生成一个<code>.ssh</code>文件夹在用户目录下，在<code>C盘</code>中打开<code>用户</code>目录，在<code>当前用户</code>目录（默认是<code>Administrator</code>）下找到<code>.ssh</code>文件夹，然后找到<code>id_rsa.pub</code>文件，右键后点击打开方式选择用记事本打开并复制里面的内容，打开你的Github主页，点击右上角的头像进入个人设置 <code>Settings -&gt; SSH and GPG keys -&gt; New SSH key</code>：</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271059214.png" alt="image-20230727104921094"></p>
+<ul>
+<li>key填写id_rsa.pub文件中的内容。<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271059234.png" alt="image-20230727105223849"></li>
+<li>尝试ssh连接,测试是否成功</li>
+</ul>
+<blockquote>
+<p>ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#x6d;">&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#x6d;</a>  &#x2F;&#x2F;这里的邮箱地址不用更改</p>
+</blockquote>
+<ul>
+<li>如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入<code>yes</code>，如果看到下列代码，则说明成功连接：</li>
+</ul>
+<blockquote>
+<p>Hi xxxxxx! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<ul>
+<li>以管理员身份运行cmd窗口<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271117829.png" alt="image-20230727111637541"></li>
+</ul>
+<p>然后转移到<code>blog</code>文件夹下使用下列命令进行安转hexo插件</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271124799.png" alt="image-20230727112316174"></p>
+<ul>
+<li>在之前的<code>Git Bash Here</code>窗口还需要继续配置以下命令</li>
+</ul>
+<blockquote>
+<p>git config –global user.name “xxx”&#x2F;&#x2F; 你的github用户名，非昵称<br>git config –global user.email  “<a href="mailto:xxx@qq.com">xxx@qq.com</a>“&#x2F;&#x2F; 填写你的github注册邮箱</p>
+<p>如果出现以下代码：error: did you mean <code>--global</code> (with two dashes)?</p>
+<p>则说明输入上面代码中第三个<code>--global</code>少输入了一个<code>-</code></p>
+</blockquote>
+</li>
+<li><h5 id="准备上传代码"><a href="#准备上传代码" class="headerlink" title="准备上传代码"></a>准备上传代码</h5><ul>
+<li>在Github上新建一个存储库，打开你的Github主页，点击右上上角的<code>+</code>号然后点击<code>New repository</code>：命名为<code>xxx.github.io</code>xxx为你的Github用户名或者自己取，无特殊要求<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271441826.png" alt="image-20230727143701507"></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271441556.png" alt="image-20230727144100097"></p>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271508099.png" alt="image-20230727145120930"></p>
+<ul>
+<li>编辑<code>blog</code>文件夹下的<code>_config.yml</code>文件（用记事本打开），拉倒最后一行添加如下代码。<br>PS：注意保持格式，缩进不对（空格个数），会导致上传不成功，<code>：</code>后面有一个空格，<code> repository</code>项为上面复制的代码。</li>
+</ul>
+<blockquote>
+<p>deploy:<br>&nbsp;&nbsp;type: git<br>&nbsp;&nbsp;repository: <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;</a>:xxxxx&#x2F;xxx.github.io.git<br>&nbsp;&nbsp;branch: main</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271612759.png" alt="image-20230727161215893"></p>
+</li>
+<li><h5 id="上传博客以及结果验证"><a href="#上传博客以及结果验证" class="headerlink" title="上传博客以及结果验证"></a>上传博客以及结果验证</h5><ul>
+<li>输入以下代码上传博客</li>
+</ul>
+<blockquote>
+<p>hexo d  &#x2F;&#x2F;既hexo deploy的缩写，用于部署网站<br>每次上传成功之后，需要等待1-3分钟，用来刷新页面</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271618530.png" alt="image-20230727161721689"></p>
+<ul>
+<li>上传成功后，打开你的Github主页，点击右上角的头像进入你的存储库<code>Your repositories -&gt; xxx.github.io</code>：</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271729695.png" alt="image-20230727162528982"></p>
+<ul>
+<li>在创建的存储库的设置中<code>pages</code><br>PS：④可能不会立马出现，需要等待1—3分钟，即可出现。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307271728309.png" alt="image-20230727163637104"></p>
+<ul>
+<li>如果访问博客地址和本地预览的博客地址是一样的话就说明搭建成功！</li>
+</ul>
+</li>
+<li><h5 id="hexo命令介绍"><a href="#hexo命令介绍" class="headerlink" title="hexo命令介绍"></a>hexo命令介绍</h5><pre class="line-numbers language-none"><code class="language-none">hexo new &quot;我的博客&quot; &#x2F;&#x2F;新建&quot;我的博客&quot;文章
+hexo new page &quot;pageName&quot; &#x2F;&#x2F;新建&quot;pagName&quot;页面
+hexo generate &#x2F;&#x2F;生成静态页面至public目录
+hexo server &#x2F;&#x2F;启动服务预览
+hexo deploy &#x2F;&#x2F;部署网站
+
+hexo server &#x2F;&#x2F;Hexo会监视文件变动并自动更新，无须重启服务器
+hexo server -s &#x2F;&#x2F;静态模式
+hexo server -p 5000 &#x2F;&#x2F;更改端口
+hexo server -i 192.168.1.1 &#x2F;&#x2F;自定义 IP
+hexo clean &#x2F;&#x2F;清除缓存，若是网页正常情况下可以忽略这条命令
+hexo version  &#x2F;&#x2F;查看Hexo的版本
+
+hexo s -g &#x2F;&#x2F;生成静态页并本地预览
+hexo d -g &#x2F;&#x2F;生成静态页并部署网站<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>更多指令以及其他帮助请访问hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
+</li>
+<li><h5 id="hexo目录结构"><a href="#hexo目录结构" class="headerlink" title="hexo目录结构"></a>hexo目录结构</h5><blockquote>
+<p> .deploy      &#x2F;&#x2F;hexo deploy生成的文件<br> node_modules  &#x2F;&#x2F;npm组件<br> public        &#x2F;&#x2F;生成的静态网页文件<br>scaffolds      &#x2F;&#x2F;模板<br> source        &#x2F;&#x2F;博客正文和其他源文件（主题不一样则内容不一样）<br> source_posts    &#x2F;&#x2F;用于存放我们自己写的文章文件后缀为：.md<br> themes        &#x2F;&#x2F;用于存放主题<br> _config.yml  &#x2F;&#x2F;全局配置文件<br> package.json  &#x2F;&#x2F;定义了hexo所需要的各种模块</p>
+</blockquote>
+</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -490,7 +631,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Huzi</a>
+                    <a href="/about" rel="external nofollow noreferrer">狐狐</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -513,7 +654,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Huzi</a>
+                    <a href="/about" target="_blank">狐狐</a>
                     !
                 </span>
             </div>
@@ -537,7 +678,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/HTML/">
+                                    <span class="chip bg-color">-HTML</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -713,16 +858,15 @@
                 <a href="/2023/07/26/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
                     <div class="card-image">
                         
+                        <img src="/images/9.jpg" class="responsive-img" alt="利用Github搭建hexo博客">
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="创建自己的博客">
-                        
-                        <span class="card-title">创建自己的博客</span>
+                        <span class="card-title">利用Github搭建hexo博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            笨蛋⑨也能看懂的创建博客的方法，搭建第一个属于自己的博客吧！
                         
                     </div>
                     <div class="publish-info">
@@ -731,13 +875,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Huzi
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/HTML%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    HTML学习
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">-HTML</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
