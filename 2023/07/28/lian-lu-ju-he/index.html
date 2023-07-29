@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="typora+PicGo实现文章管理, 狐狐小窝">
+    <meta name="keywords" content="链路聚合, 狐狐小窝">
     <meta name="description" content="狐狐的小空间">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>typora+PicGo实现文章管理 | 狐狐小窝</title>
+    <title>链路聚合 | 狐狐小窝</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -298,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">typora+PicGo实现文章管理</h1>
+                    <h1 class="description center-align post-title">链路聚合</h1>
                 </div>
             </div>
         </div>
@@ -419,12 +419,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/typora/">
-                                <span class="chip bg-color">typora</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/">
+                                <span class="chip bg-color">网络拓扑</span>
                             </a>
                         
-                            <a href="/tags/PicGo/">
-                                <span class="chip bg-color">PicGo</span>
+                            <a href="/tags/eNSP/">
+                                <span class="chip bg-color">eNSP</span>
                             </a>
                         
                     </div>
@@ -435,8 +435,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/" class="post-category">
-                                博客部署
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                网络学习
                             </a>
                         
                     </div>
@@ -455,21 +455,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-07-28
+                    2023-07-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    590
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 
@@ -492,51 +492,62 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="对博客文章进行图文管理"><a href="#对博客文章进行图文管理" class="headerlink" title="对博客文章进行图文管理"></a>对博客文章进行图文管理</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ol>
-<li>Typora：一款轻量级Markdown格式的编辑器</li>
-<li>PicGo：一个用于快速上传图片并获取图片 URL 链接的工具</li>
+                <h1 id="链路聚合"><a href="#链路聚合" class="headerlink" title="链路聚合"></a>链路聚合</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;对于企业来说，随着公司业务的不断扩张，公司内部的网络规模也随之扩大，公司对网络的带宽和可靠性提出了越来越高的要求，管理难度也会相应变大，如果某一条链路发生故障的话会影响到整个网络。通常情况下，我们用下列方法解决网络故障问题：常用的链路更换为更高速率的接口板（如E接口换成G接口）或者更换更高速率的接口板设备来增加带，但是更换设备需要高额的费用，并且不够灵活，跟换设备后需要重新配置。所以我们可以采用链路聚合的方式来提高网咯带宽以及网络的稳定性。</p>
+<h2 id="链路聚合原理"><a href="#链路聚合原理" class="headerlink" title="链路聚合原理"></a>链路聚合原理</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;链路聚合（Eth-Trunk）是一种网络技术，可以在不进行硬件升级的条件下，通过将多个物理接口捆绑为一个逻辑接口，以实现出&#x2F;入流量吞吐量在各成员端口的负荷分担。<br>&nbsp;&nbsp;&nbsp;&nbsp;链路聚合可以将多条物理链路绑定成一个逻辑链路，从而提高网络带宽和可靠性。在这个过程中，多个物理链路被视为一个逻辑链路，数据包会被分配到不同的物理链路上进行传输，从而实现负载均衡和冗余备份，如果某条物理链路出现故障，这条逻辑链路依然存在。</p>
+<h2 id="链路聚合的作用"><a href="#链路聚合的作用" class="headerlink" title="链路聚合的作用"></a>链路聚合的作用</h2><ol>
+<li>用于实现链路冗余，以及带宽加倍（扩充）和可靠性。</li>
+<li>负载分担，在一个 Eth-Trunk 端口内，可以实现流量负载分担。</li>
+<li>提高可靠性，当某个成员端口连接的物理链路出现故障时，流量会切换到其他可用的链路上，从而提高整个 Trunk 链路的可靠性。</li>
+<li>增加带宽，Trunk 端口的总带宽是各成员端口带宽的总和。</li>
 </ol>
-<h2 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接"></a>参考连接</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://molunerfinn.com/PicGo/">PicGo官网</a> </li>
-<li><a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85">PicGo手册</a> </li>
-<li><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1VOVNDknjpmmGjkBqaeAz_A">typora百度网盘下载地址</a> 提取码：6ybf</li>
-</ol>
-<h2 id="搭建图库"><a href="#搭建图库" class="headerlink" title="搭建图库"></a>搭建图库</h2><h3 id="搭建准备"><a href="#搭建准备" class="headerlink" title="搭建准备"></a>搭建准备</h3><ol>
-<li>下载并安装<a target="_blank" rel="noopener" href="https://nodejs.org/en">node.js</a></li>
-<li>下载并安装<a target="_blank" rel="noopener" href="https://molunerfinn.com/PicGo/">PicGo</a></li>
-<li>下载并安装<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1VOVNDknjpmmGjkBqaeAz_A">typora</a></li>
-<li>在 typora 左上角的 <code>文件(F) -&gt; 偏好设置 -&gt; 图像</code> 配置如图所示<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281613928.png" alt="typora图像设置"></li>
-<li>配置 PIcGo 设置如图所示<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281613774.png" alt="PicGo基础设置"></li>
-</ol>
-<h3 id="在Github上创建图库"><a href="#在Github上创建图库" class="headerlink" title="在Github上创建图库"></a>在Github上创建图库</h3><ol>
-<li><p>首先在GIthub上新建一个存储库，打开你的Github主页，点击右上上角的<code>+</code>号然后点击<code>New repository</code>：命名为<code>image</code>或自行命名，无特殊要求<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281613901.png" alt="创建新的存储库"><br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281615862.png" alt="给存储库命名"></p>
-</li>
-<li><p>获取Token，点击右上角的头像进入个人设置 <code>Settings</code> 然后在左边的导航栏点击最后一个<code>Developer settings</code><br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281607541.png" alt="开发者设置"></p>
+<h2 id="链路聚合的方式为以下两种方式"><a href="#链路聚合的方式为以下两种方式" class="headerlink" title="链路聚合的方式为以下两种方式"></a>链路聚合的方式为以下两种方式</h2><p><strong>静态trunk</strong>：静态 Trunk 将多条物理链路直接加入 Trunk 组，形成一条逻辑链路，又称为手工负载分担模式。</p>
+<p><strong>动态LACP</strong>：链路聚合控制协议(Link Aggregation Control Protocol，LACP）是一种实现链路动态汇聚的协议。LACP 协议通过链路聚合控制协议数据单元(Link Aggregation Control Protocol Data Unit，LACPDU)与对端交互信息。激活某端口的 LACP 协议后，该端口将通过发送 LACPDU 向对端通告自己的系统优先级、系统 MAC 地址、端口优先级和端口号。对端接收到这些信息后，将这些信息与自己的属性比较，选择能够聚合的端口，从而双方可以对端口加入或退出某个动态聚合组达成一致。</p>
+<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><h3 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;下面就配置 LSW2 和 LSW1 之间的两条物理链路为一条聚合链路，配置 LSW3 和 LSW1之间的两条物理链路为一条聚合链路，并将这两条聚合链路配置为干道链路，允许VLAN 20 和 VLAN 40 的帧通过，如图所示。</p>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291830609.png" alt="静态trunk实验拓补图"></p>
+<h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;学会使用静态 Trunk ，静态 Trunk将多条物理链路直接加入 Trunk 组，形成一条逻辑链路，又称为手工负载分担模式。<br>并验证聚合链路的可靠性。</p>
+<h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><p>首先如图所示配置好PC机的相关ip</p>
+<h4 id="步骤一：SW2与SW1互联链路配置"><a href="#步骤一：SW2与SW1互联链路配置" class="headerlink" title="步骤一：SW2与SW1互联链路配置"></a>步骤一：SW2与SW1互联链路配置</h4><h5 id="SW2的配置："><a href="#SW2的配置：" class="headerlink" title="SW2的配置："></a>SW2的配置：</h5><blockquote>
+<p>[SW2] int Eth-Trunk 1 &#x2F;&#x2F;创建编号为 1 的 Eth-Trunk<br>[SW2-Eth-Trunk1] mode manual load-balance &#x2F;&#x2F;即工作模式为手工负载分担模式<br>[SW2-Eth-Trunk1] trunkport g 0&#x2F;0&#x2F;1 to 0&#x2F;0&#x2F;2 &#x2F;&#x2F;指定聚合链路中的物理端口<br>[SW2-Eth-Trunk1] port link-type trunk &#x2F;&#x2F;将聚合端口链路类型设置为Trunk<br>[SW2-Eth-Trunk1] port trunk allow-pass vlan 20 40 &#x2F;&#x2F;允许 VLAN 20 和VLAN 40 的帧通过</p>
+</blockquote>
+<h5 id="SW1的配置："><a href="#SW1的配置：" class="headerlink" title="SW1的配置："></a>SW1的配置：</h5><blockquote>
+<p>[SW1] int Eth-Trunk 1 &#x2F;&#x2F;这个编号建议和 LSW2 上的相同<br>[SW1-Eth-Trunk1] mode manual load-balance<br>[SW1-Eth-Trunk1] trunkport g 0&#x2F;0&#x2F;1 to 0&#x2F;0&#x2F;2<br>[SW1-Eth-Trunk1] port link-type trunk<br>[SW1-Eth-Trunk1] port trunk allow-pass vlan 20 40<br>[SW1] lacp priority 100 &#x2F;&#x2F;在 SW1 上配置优先级为 100，使其成为 LACP 主动端</p>
+</blockquote>
+<h4 id="步骤二：SW3与SW1互联链路配置"><a href="#步骤二：SW3与SW1互联链路配置" class="headerlink" title="步骤二：SW3与SW1互联链路配置"></a>步骤二：SW3与SW1互联链路配置</h4><h5 id="SW3的配置："><a href="#SW3的配置：" class="headerlink" title="SW3的配置："></a>SW3的配置：</h5><blockquote>
+<p>[SW3] int Eth-Trunk 2 &#x2F;&#x2F;创建编号为 2 的 Eth-Trunk<br>[SW3-Eth-Trunk1] mode manual load-balance &#x2F;&#x2F;即工作模式为手工负载分担模式<br>[SW3-Eth-Trunk1] trunkport g 0&#x2F;0&#x2F;1 to 0&#x2F;0&#x2F;2 &#x2F;&#x2F;指定聚合链路中的物理端口<br>[SW3-Eth-Trunk1] port link-type trunk &#x2F;&#x2F;将聚合端口链路类型设置为Trunk<br>[SW3-Eth-Trunk1] port trunk allow-pass vlan 20 40 &#x2F;&#x2F;允许 VLAN 20 和VLAN 40 的帧通过</p>
+</blockquote>
+<h5 id="SW1的配置"><a href="#SW1的配置" class="headerlink" title="SW1的配置"></a>SW1的配置</h5><blockquote>
+<p>[SW1] int Eth-Trunk 2 &#x2F;&#x2F;这个编号建议和 LSW3 上的相同<br>[SW1-Eth-Trunk1] mode manual load-balance<br>[SW1-Eth-Trunk1] trunkport g 0&#x2F;0&#x2F;1 to 0&#x2F;0&#x2F;2<br>[SW1-Eth-Trunk1] port link-type trunk<br>[SW1-Eth-Trunk1] port trunk allow-pass vlan 20 40</p>
+</blockquote>
+<h4 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h4><p>用指令查看刚刚配置的eth-trunk是否配置成功</p>
+<blockquote>
+<p>dis eth-trunk  &#x2F;&#x2F;查看交换机上的eth-trunk</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291829248.png" alt="eth-trunk配置结果"></p>
+<hr>
+<h4 id="如果需要同一VLAN下的PC之间进行通信则需要额外以下步骤："><a href="#如果需要同一VLAN下的PC之间进行通信则需要额外以下步骤：" class="headerlink" title="如果需要同一VLAN下的PC之间进行通信则需要额外以下步骤："></a>如果需要同一VLAN下的PC之间进行通信则需要额外以下步骤：</h4><h4 id="在与PC机相邻的E接口下配置access接口"><a href="#在与PC机相邻的E接口下配置access接口" class="headerlink" title="在与PC机相邻的E接口下配置access接口"></a>在与PC机相邻的E接口下配置access接口</h4><p>这里拿PC1与PC2能否通讯举例</p>
+<p>在与PC1相连的SW2上进行配置</p>
+<blockquote>
+<p>[SW2] int e0&#x2F;0&#x2F;1<br>[SW2-Ethernet0&#x2F;0&#x2F;1] port link-type access  &#x2F;&#x2F;设置接口模式为access<br>[SW2-Ethernet0&#x2F;0&#x2F;1] port default vlan 20  &#x2F;&#x2F;将接口划给vlan20</p>
+</blockquote>
+<p>在与PC2相连的SW3上进行配置</p>
+<blockquote>
+<p>[SW3] int e0&#x2F;0&#x2F;1<br>[SW3-Ethernet0&#x2F;0&#x2F;1] port link-type access  &#x2F;&#x2F;设置接口模式为access<br>[SW3-Ethernet0&#x2F;0&#x2F;1] port default vlan 20   &#x2F;&#x2F;将接口划给vlan20</p>
+</blockquote>
+<h5 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h5><p>用PC1去pingPC2,下图显示能ping通，说明配置成功。</p>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291829507.png" alt="PC通讯结果"></p>
+<h4 id="验证链路聚合的可靠性"><a href="#验证链路聚合的可靠性" class="headerlink" title="验证链路聚合的可靠性"></a>验证链路聚合的可靠性</h4><h5 id="步骤一：首先将SW1上的其中任意一条接口关闭"><a href="#步骤一：首先将SW1上的其中任意一条接口关闭" class="headerlink" title="步骤一：首先将SW1上的其中任意一条接口关闭"></a>步骤一：首先将SW1上的其中任意一条接口关闭</h5><p>在SW1上利用指令首先将G0&#x2F;0&#x2F;1上的端口给关闭</p>
+<blockquote>
+<p>[SW1] int g0&#x2F;0&#x2F;1</p>
+<p>[SW1-GigabitEthernet0&#x2F;0&#x2F;1] shutdown  &#x2F;&#x2F;将SW1上的G0&#x2F;0&#x2F;1接口关闭</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291905362.png" alt="端口关闭结果"></p>
+<h5 id="步骤二：验证PC1能否ping通PC2"><a href="#步骤二：验证PC1能否ping通PC2" class="headerlink" title="步骤二：验证PC1能否ping通PC2"></a>步骤二：验证PC1能否ping通PC2</h5><ul>
+<li>关闭端口后需要等待50~90秒的时间PC1方可与PC2通信</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291905576.png" alt="PC1与PC2通讯结果"></p>
 <ul>
-<li>在这个界面根据步骤点击<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281641662.png" alt="生成新令牌"></li>
-<li>然后如图配置<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281605997.png" alt="生成Token"></li>
-<li>复制你的Token<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281604665.png" alt="复制Token"></li>
+<li>实验成功的话，则可以证明链路聚合具有可靠性。</li>
 </ul>
-</li>
-</ol>
-<h3 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h3><ol>
-<li>在图床设置中找到 <code>Github</code> 然后点击 <code>+</code> 创建新的图床，配置如图所示<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281604667.png" alt="配置PicGo"></li>
-<li>配置完成后选中 <code>tupian</code> 并且将GIthub图库设置为默认图库然后测试图片是否能上传<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281604601.png" alt="上传GIthub图库验证"><ul>
-<li>能成功上传则说明PicGo配置成功！</li>
-</ul>
-</li>
-</ol>
-<h2 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h2><h3 id="如何用typora上传图片"><a href="#如何用typora上传图片" class="headerlink" title="如何用typora上传图片"></a>如何用typora上传图片</h3><ol>
-<li>鼠标右键点击 <code>新建(w) -&gt; 文本文档</code> 然后将新建文本文档文档的后缀 <code>.txt</code> 改成 <code>.md</code><br>如果创建新的文档文本没有看到后缀 <code>.txt</code> 的话可能是电脑默认隐藏了文件扩展名，那么就需要以下操作</li>
-<li>点击 <code>此电脑</code> （我的电脑）然后如图，按步骤操作即可显示文件扩展名<ul>
-<li>如果桌面上没有 <code>此电脑</code> ，则鼠标右键桌面 <code>个性化(R) -&gt; 主题 -&gt; 桌面图标设置</code> 就可以把 <code>此电脑</code> 图标显示在桌面上了<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281623185.png" alt="显示文件扩展名"></li>
-</ul>
-</li>
-<li>我们可以直接把图片文件拖进typora里面，然后右键点击 <code>上传图片</code> 即可将图片上传到之前我们所创建的图库里。然后进行验证（验证方法如图所示）<br><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307281634930.png" alt="上传图片验证"><ul>
-<li>当使用浏览器输入网址能访问我们放入typroa的图片则说明上传成功！至此我们利用typora写文章就可以放入图片并且上传至我们的博客啦！</li>
-</ul>
-</li>
-</ol>
 
                 
             </div>
@@ -563,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/07/28/tu-wen-guan-li/">http://example.com/2023/07/28/tu-wen-guan-li/</a>
+                    <a href="http://example.com/2023/07/28/lian-lu-ju-he/">http://example.com/2023/07/28/lian-lu-ju-he/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -601,12 +612,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/typora/">
-                                    <span class="chip bg-color">typora</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/">
+                                    <span class="chip bg-color">网络拓扑</span>
                                 </a>
                             
-                                <a href="/tags/PicGo/">
-                                    <span class="chip bg-color">PicGo</span>
+                                <a href="/tags/eNSP/">
+                                    <span class="chip bg-color">eNSP</span>
                                 </a>
                             
                         </div>
@@ -776,9 +787,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/07/28/lian-lu-ju-he/">
                     <div class="card-image">
@@ -795,9 +807,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -810,6 +822,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -832,23 +845,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/07/26/chuang-jian-zi-ji-de-bo-ke/">
+                <a href="/2023/07/28/tu-wen-guan-li/">
                     <div class="card-image">
                         
-                        <img src="/images/9.jpg" class="responsive-img" alt="利用Github搭建hexo博客">
+                        <img src="/images/5.jpg" class="responsive-img" alt="typora+PicGo实现文章管理">
                         
-                        <span class="card-title">利用Github搭建hexo博客</span>
+                        <span class="card-title">typora+PicGo实现文章管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            笨蛋⑨也能看懂的创建博客的方法，搭建第一个属于自己的博客吧！
+                            写文章怎么能没有编辑器和图片怎么能行！来这里看看如何把图片放进文章吧！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-28
                             </span>
                         <span class="publish-author">
                             
@@ -865,12 +878,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
+                    <a href="/tags/typora/">
+                        <span class="chip bg-color">typora</span>
                     </a>
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/PicGo/">
+                        <span class="chip bg-color">PicGo</span>
                     </a>
                     
                 </div>
