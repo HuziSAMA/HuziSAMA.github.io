@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="链路聚合, 狐狐小窝">
+    <meta name="keywords" content="交换技术-VLAN, 狐狐小窝">
     <meta name="description" content="狐狐的小空间">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>链路聚合 | 狐狐小窝</title>
+    <title>交换技术-VLAN | 狐狐小窝</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -298,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">链路聚合</h1>
+                    <h1 class="description center-align post-title">交换技术-VLAN</h1>
                 </div>
             </div>
         </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-07-28
+                    2023-07-31
                 </div>
                 
 
@@ -462,14 +462,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    3.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    11 分
                 </div>
                 
 
@@ -492,62 +492,163 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="链路聚合"><a href="#链路聚合" class="headerlink" title="链路聚合"></a>链路聚合</h1><h2 id="链路聚合概述"><a href="#链路聚合概述" class="headerlink" title="链路聚合概述"></a>链路聚合概述</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;对于企业来说，随着公司业务的不断扩张，公司内部的网络规模也随之扩大，公司对网络的带宽和可靠性提出了越来越高的要求，管理难度也会相应变大，如果某一条链路发生故障的话会影响到整个网络。通常情况下，我们用下列方法解决网络故障问题：常用的链路更换为更高速率的接口板（如E接口换成G接口）或者更换更高速率的接口板设备来增加带，但是更换设备需要高额的费用，并且不够灵活，跟换设备后需要重新配置。所以我们可以采用链路聚合的方式来提高网咯带宽以及网络的稳定性。</p>
-<h2 id="链路聚合原理"><a href="#链路聚合原理" class="headerlink" title="链路聚合原理"></a>链路聚合原理</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;链路聚合（Eth-Trunk）是一种网络技术，可以在不进行硬件升级的条件下，通过将多个物理接口捆绑为一个逻辑接口，以实现出&#x2F;入流量吞吐量在各成员端口的负荷分担。<br>&nbsp;&nbsp;&nbsp;&nbsp;链路聚合可以将多条物理链路绑定成一个逻辑链路，从而提高网络带宽和可靠性。在这个过程中，多个物理链路被视为一个逻辑链路，数据包会被分配到不同的物理链路上进行传输，从而实现负载均衡和冗余备份，如果某条物理链路出现故障，这条逻辑链路依然存在。</p>
-<h2 id="链路聚合的作用"><a href="#链路聚合的作用" class="headerlink" title="链路聚合的作用"></a>链路聚合的作用</h2><ol>
-<li>用于实现链路冗余，以及带宽加倍（扩充）和可靠性。</li>
-<li>负载分担，在一个 Eth-Trunk 端口内，可以实现流量负载分担。</li>
-<li>提高可靠性，当某个成员端口连接的物理链路出现故障时，流量会切换到其他可用的链路上，从而提高整个 Trunk 链路的可靠性。</li>
-<li>增加带宽，Trunk 端口的总带宽是各成员端口带宽的总和。</li>
+                <h1 id="交换技术-VLAN"><a href="#交换技术-VLAN" class="headerlink" title="交换技术-VLAN"></a>交换技术-VLAN</h1><h2 id="VLAN概述"><a href="#VLAN概述" class="headerlink" title="VLAN概述"></a>VLAN概述</h2><h3 id="VLAN的由来"><a href="#VLAN的由来" class="headerlink" title="VLAN的由来"></a>VLAN的由来</h3><p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311809710.png" alt="没有部署VLAN的信息传输过程"></p>
+<ol>
+<li>在典型交换网络中，当某台主机发送一个广播帧或未知单播帧时，该数据帧会被泛洪，甚至传递到整个广播域。（图示中PC1的目标是PC2由于发送一个广播会导致如图所示产生大量垃圾流量）</li>
+<li>广播域越大，产生的网络安全问题、垃圾流量问题，就越严重。</li>
 </ol>
-<h2 id="链路聚合的方式为以下两种方式"><a href="#链路聚合的方式为以下两种方式" class="headerlink" title="链路聚合的方式为以下两种方式"></a>链路聚合的方式为以下两种方式</h2><p><strong>静态trunk</strong>：静态 Trunk 将多条物理链路直接加入 Trunk 组，形成一条逻辑链路，又称为手工负载分担模式。</p>
-<p><strong>动态LACP</strong>：链路聚合控制协议(Link Aggregation Control Protocol，LACP）是一种实现链路动态汇聚的协议。LACP 协议通过链路聚合控制协议数据单元(Link Aggregation Control Protocol Data Unit，LACPDU)与对端交互信息。激活某端口的 LACP 协议后，该端口将通过发送 LACPDU 向对端通告自己的系统优先级、系统 MAC 地址、端口优先级和端口号。对端接收到这些信息后，将这些信息与自己的属性比较，选择能够聚合的端口，从而双方可以对端口加入或退出某个动态聚合组达成一致。</p>
-<h2 id="链路聚合实验"><a href="#链路聚合实验" class="headerlink" title="链路聚合实验"></a>链路聚合实验</h2><h3 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;下面就配置 LSW2 和 LSW1 之间的两条物理链路为一条聚合链路，配置 LSW3 和 LSW1之间的两条物理链路为一条聚合链路，并将这两条聚合链路配置为干道链路，允许VLAN 20 和 VLAN 40 的帧通过，如图所示。</p>
-<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291830609.png" alt="静态trunk实验拓补图"></p>
-<h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;学会使用静态 Trunk ，静态 Trunk将多条物理链路直接加入 Trunk 组，形成一条逻辑链路，又称为手工负载分担模式。<br>并验证聚合链路的可靠性。</p>
-<h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><p>首先如图所示配置好PC机的相关ip</p>
-<h4 id="步骤一：SW2与SW1互联链路配置"><a href="#步骤一：SW2与SW1互联链路配置" class="headerlink" title="步骤一：SW2与SW1互联链路配置"></a>步骤一：SW2与SW1互联链路配置</h4><h5 id="SW2的配置："><a href="#SW2的配置：" class="headerlink" title="SW2的配置："></a>SW2的配置：</h5><blockquote>
-<p>[SW2] int Eth-Trunk 1 &#x2F;&#x2F;创建编号为 1 的 Eth-Trunk<br>[SW2-Eth-Trunk1] mode manual load-balance &#x2F;&#x2F;即工作模式为手工负载分担模式<br>[SW2-Eth-Trunk1] trunkport g 0&#x2F;0&#x2F;1 to 0&#x2F;0&#x2F;2 &#x2F;&#x2F;指定聚合链路中的物理端口<br>[SW2-Eth-Trunk1] port link-type trunk &#x2F;&#x2F;将聚合端口链路类型设置为Trunk<br>[SW2-Eth-Trunk1] port trunk allow-pass vlan 20 40 &#x2F;&#x2F;允许 VLAN 20 和VLAN 40 的帧通过</p>
-</blockquote>
-<h5 id="SW1的配置："><a href="#SW1的配置：" class="headerlink" title="SW1的配置："></a>SW1的配置：</h5><blockquote>
-<p>[SW1] int Eth-Trunk 1 &#x2F;&#x2F;这个编号建议和 LSW2 上的相同<br>[SW1-Eth-Trunk1] mode manual load-balance<br>[SW1-Eth-Trunk1] trunkport g 0&#x2F;0&#x2F;1 to 0&#x2F;0&#x2F;2<br>[SW1-Eth-Trunk1] port link-type trunk<br>[SW1-Eth-Trunk1] port trunk allow-pass vlan 20 40<br>[SW1] lacp priority 100 &#x2F;&#x2F;在 SW1 上配置优先级为 100，使其成为 LACP 主动端</p>
-</blockquote>
-<h4 id="步骤二：SW3与SW1互联链路配置"><a href="#步骤二：SW3与SW1互联链路配置" class="headerlink" title="步骤二：SW3与SW1互联链路配置"></a>步骤二：SW3与SW1互联链路配置</h4><h5 id="SW3的配置："><a href="#SW3的配置：" class="headerlink" title="SW3的配置："></a>SW3的配置：</h5><blockquote>
-<p>[SW3] int Eth-Trunk 2 &#x2F;&#x2F;创建编号为 2 的 Eth-Trunk<br>[SW3-Eth-Trunk1] mode manual load-balance &#x2F;&#x2F;即工作模式为手工负载分担模式<br>[SW3-Eth-Trunk1] trunkport g 0&#x2F;0&#x2F;1 to 0&#x2F;0&#x2F;2 &#x2F;&#x2F;指定聚合链路中的物理端口<br>[SW3-Eth-Trunk1] port link-type trunk &#x2F;&#x2F;将聚合端口链路类型设置为Trunk<br>[SW3-Eth-Trunk1] port trunk allow-pass vlan 20 40 &#x2F;&#x2F;允许 VLAN 20 和VLAN 40 的帧通过</p>
-</blockquote>
-<h5 id="SW1的配置"><a href="#SW1的配置" class="headerlink" title="SW1的配置"></a>SW1的配置</h5><blockquote>
-<p>[SW1] int Eth-Trunk 2 &#x2F;&#x2F;这个编号建议和 LSW3 上的相同<br>[SW1-Eth-Trunk1] mode manual load-balance<br>[SW1-Eth-Trunk1] trunkport g 0&#x2F;0&#x2F;1 to 0&#x2F;0&#x2F;2<br>[SW1-Eth-Trunk1] port link-type trunk<br>[SW1-Eth-Trunk1] port trunk allow-pass vlan 20 40</p>
-</blockquote>
-<h4 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h4><p>用指令查看刚刚配置的eth-trunk是否配置成功</p>
-<blockquote>
-<p>dis eth-trunk  &#x2F;&#x2F;查看交换机上的eth-trunk</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291829248.png" alt="eth-trunk配置结果"></p>
-<hr>
-<h4 id="如果需要同一VLAN下的PC之间进行通信则需要额外以下步骤："><a href="#如果需要同一VLAN下的PC之间进行通信则需要额外以下步骤：" class="headerlink" title="如果需要同一VLAN下的PC之间进行通信则需要额外以下步骤："></a>如果需要同一VLAN下的PC之间进行通信则需要额外以下步骤：</h4><h4 id="在与PC机相邻的E接口下配置access接口"><a href="#在与PC机相邻的E接口下配置access接口" class="headerlink" title="在与PC机相邻的E接口下配置access接口"></a>在与PC机相邻的E接口下配置access接口</h4><p>这里拿PC1与PC2能否通讯举例</p>
-<p>在与PC1相连的SW2上进行配置</p>
-<blockquote>
-<p>[SW2] int e0&#x2F;0&#x2F;1<br>[SW2-Ethernet0&#x2F;0&#x2F;1] port link-type access  &#x2F;&#x2F;设置接口模式为access<br>[SW2-Ethernet0&#x2F;0&#x2F;1] port default vlan 20  &#x2F;&#x2F;将接口划给vlan20</p>
-</blockquote>
-<p>在与PC2相连的SW3上进行配置</p>
-<blockquote>
-<p>[SW3] int e0&#x2F;0&#x2F;1<br>[SW3-Ethernet0&#x2F;0&#x2F;1] port link-type access  &#x2F;&#x2F;设置接口模式为access<br>[SW3-Ethernet0&#x2F;0&#x2F;1] port default vlan 20   &#x2F;&#x2F;将接口划给vlan20</p>
-</blockquote>
-<h5 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h5><p>用PC1去pingPC2,下图显示能ping通，说明配置成功。</p>
-<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291829507.png" alt="PC通讯结果"></p>
-<h4 id="验证链路聚合的可靠性"><a href="#验证链路聚合的可靠性" class="headerlink" title="验证链路聚合的可靠性"></a>验证链路聚合的可靠性</h4><h5 id="步骤一：首先将SW1上的其中任意一条接口关闭"><a href="#步骤一：首先将SW1上的其中任意一条接口关闭" class="headerlink" title="步骤一：首先将SW1上的其中任意一条接口关闭"></a>步骤一：首先将SW1上的其中任意一条接口关闭</h5><p>在SW1上利用指令首先将G0&#x2F;0&#x2F;1上的端口给关闭</p>
-<blockquote>
-<p>[SW1] int g0&#x2F;0&#x2F;1</p>
-<p>[SW1-GigabitEthernet0&#x2F;0&#x2F;1] shutdown  &#x2F;&#x2F;将SW1上的G0&#x2F;0&#x2F;1接口关闭</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291905362.png" alt="端口关闭结果"></p>
-<h5 id="步骤二：验证PC1能否ping通PC2"><a href="#步骤二：验证PC1能否ping通PC2" class="headerlink" title="步骤二：验证PC1能否ping通PC2"></a>步骤二：验证PC1能否ping通PC2</h5><ul>
-<li>关闭端口后需要等待50~90秒的时间PC1方可与PC2通信</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307291905576.png" alt="PC1与PC2通讯结果"></p>
 <ul>
-<li>实验成功的话，则可以证明链路聚合具有可靠性。</li>
+<li>为了解决广播域带来的问题，人们引入了 VLAN 技术：通过在交换机上部署 VLAN，可以将一个规模较大的广播域在逻辑上划分成若干个不同的、规模较小的广播域，由此可以有效地提升网络的安全性，同时减少垃圾流量，节约网络资源。</li>
 </ul>
+<h3 id="什么是VLAN"><a href="#什么是VLAN" class="headerlink" title="什么是VLAN"></a>什么是VLAN</h3><ul>
+<li>VLAN（Virtual Local Area Network）,即虚拟局域网技术，是对连接到的第二层交换机端口的网络用户的逻辑分段，作用是将物理的局域网在逻辑上划分为多个广播域的技术。<ol>
+<li>每一个 VLAN 对应一个广播域</li>
+<li>每一个 VLAN 对应一个子网</li>
+</ol>
+</li>
+</ul>
+<h2 id="VLAN的工作原理"><a href="#VLAN的工作原理" class="headerlink" title="VLAN的工作原理"></a>VLAN的工作原理</h2><h3 id="VLAN基本原理"><a href="#VLAN基本原理" class="headerlink" title="VLAN基本原理"></a>VLAN基本原理</h3><p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311810733.png" alt="进行VLAN部署后的信息传输过程"></p>
+<p>虚拟局域网 VLAN 可以隔离广播域（如图所示PC1只会向同一VLAN下发送广播）</p>
+<ul>
+<li>特点：不受地域限制。同一 VLAN 内的设备才能直接进行二层通信。</li>
+</ul>
+<h3 id="如何实现VLAN"><a href="#如何实现VLAN" class="headerlink" title="如何实现VLAN"></a>如何实现VLAN</h3><p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311807995.png" alt="VLAN实现图"></p>
+<p>Switch1 与 Switch2 同属一个企业，该企业统一规划了网络中的 VLAN。其中 VLAN10用于 A 部门，VLAN20 用于 B 部门。A、B 部门的员工在 Switch1 和 Switch2 上都有接入。</p>
+<p>PC1 发出的数据经过 Switch1 和 Switch2 之间的链路到达了 Switch2。<strong>如果不加处理，后者无法判断该数据所属的 VLAN，也不知道应该将这个数据输出到本地哪个 VLAN中。</strong></p>
+<p>所以我们在传输信息过程中插入了<strong>VLAN标签</strong></p>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311810438.png" alt="VLAN传输过程"></p>
+<p>Switch1 和 Switch2 之间的链路要承载多个 VLAN 的数据，需要一种基于 VLAN 的数据“标记”手段，以便对不同 VLAN 的数据帧进行区分。IEEE 802.1Q 标准（也被称为 Dot1Q）定义了该“标记”方法。该标准对传统的以太网数据帧进行修改，在帧头中插入 802.1Q Tag，而在该 Tag 中，便可以写入 VLAN 信息。</p>
+<h3 id="VLAN标签（VLAN-Tag）"><a href="#VLAN标签（VLAN-Tag）" class="headerlink" title="VLAN标签（VLAN Tag）"></a>VLAN标签（VLAN Tag）</h3><p><strong>VLAN标签：</strong>要使交换机能够分辨不同 VLAN 的报文，需要在报文中添加标识 VLAN 信息的字段。IEEE 802.1Q 协议规定，在以太网数据帧中加入 4 个字节的 VLAN 标签，又称 VLAN Tag，简称 Tag。</p>
+<ul>
+<li>交换机如何识别接收到的数据帧属于哪个 VLAN？</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311807201.png" alt="VLAN接收数据帧"></p>
+<ul>
+<li><p>如图所示，SW1 识别出某个帧是属于哪个 VLAN 后，会在这个帧的特定位置上添加一个标签。这个标签明确地标明了这个帧是属于哪个 VLAN 的。其他交换机（如 SW2）收到这个带标签的数据帧后，就能轻而易举地直接根据标签信息识别出这个帧属于哪个VLAN。</p>
+</li>
+<li><p>IEEE 802.1Q 定义了这种带标签的数据帧的格式。满足这种格式的数据帧称为 IEEE802.1Q 数据帧，也称 VLAN 数据帧。</p>
+</li>
+</ul>
+<h3 id="VLAN的帧格式"><a href="#VLAN的帧格式" class="headerlink" title="VLAN的帧格式"></a>VLAN的帧格式</h3><p>带有 tag 的是 802.1Q 数据帧，untag 的为标准的以太网帧，通过 Tag 中的信息来区分不同的 VALN</p>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311810399.png" alt="VLAN的帧格式"></p>
+<p>先来看一下 vlan 数据包的帧格式，整个 vlan 信息大小为 4 个字节，分别为 2 个字节的标签协议标识符（Tag Protocol Identifier），和 2 个字节标签控制信息（Tag Control Infomation）。</p>
+<p><strong>在一个 VLAN 交换网络中，以太网帧主要有以下两种形式：</strong></p>
+<ol>
+<li>有标记帧（Tagged 帧）：IEEE 802.1Q 协议规定，在以太网数据帧的目的 MAC 地址和源 MAC 地址字段之后、协议类型字段之前加入 4 个字节的 VLAN 标签（又称VLAN Tag，简称 Tag）的数据帧。</li>
+<li>无标记帧（Untagged 帧）：原始的、未加入 4 字节 VLAN 标签的数据帧。</li>
+</ol>
+<p><strong>VLAN 数据帧中的主要字段：</strong></p>
+<ol>
+<li><p>TPID（标签协议标识符）：标识数据帧的类型，值为 0x8100 时表示 802.1Q 帧。<br>总长为 2 字节，Tag Protocol Identifier（标签协议标识符），表示数据帧类型。取值为 0x8100 时表示 IEEE 802.1Q 的 VLAN 数据帧。如果不支持 802.1Q 的设备收到这样的帧，会将其丢弃。各设备厂商可以自定义该字段的值。当邻居设备将 TPID 值配置为非 0x8100 时，为了能够识别这样的报文，实现互通，必须在本设备上修改 TPID 值，确保和邻居设备的 TPID 值配置一致。</p>
+</li>
+<li><p>标签控制信息（Tag Control Infomation），又有三个子字段组成：</p>
+<p> a.PRI（优先级）：3 bit，Priority，表示数据帧的优先级，用于 QoS。取值范围为 0～7，值越大优先级越高。当网络阻塞时，交换机优先发送优先级高的数据帧，主要用于 QoS。</p>
+<p> b.CFI（标准格式指示符）：在以太网环境中，该字段的值为 0。</p>
+<p> c.VLAN ID（VLAN 标识符）：标识该帧所属的 VLAN</p>
+</li>
+</ol>
+<h2 id="VLAN的范围"><a href="#VLAN的范围" class="headerlink" title="VLAN的范围"></a>VLAN的范围</h2><p>VID 占 12bit，所以是 2 的 12 次方个 VLAN，共 4096VLAN，0 和 4095 作为保留，1-4094 可用</p>
+<ul>
+<li><p>VLAN 1-1001： 以太网 VLAN（普通）：用于以太网的 VLAN（其中 1 是默认 VLAN，用户能使用，但是无法删除）</p>
+</li>
+<li><p>VLAN1025-4094：拓展 VLAN</p>
+</li>
+<li><p>VLAN1：自然 VLAN（本征 VLAN）–pvid(vlan1）—— 一般用于流量较大的部门</p>
+</li>
+</ul>
+<h2 id="交换机的接口类型"><a href="#交换机的接口类型" class="headerlink" title="交换机的接口类型"></a>交换机的接口类型</h2><p>交换机接口分为以下三种类型：<code>acess</code> <code>trunk</code> <code>hybrid</code> </p>
+<ol>
+<li><strong>acess 端口</strong>：主要用来连接终端（PC、服务器）设备。Access 接口所连接的这些设备的网卡往往只收发无标记帧。Access 接口只能加入一个 VLAN。</li>
+<li><strong>trunk 端口</strong>：主要用来连接交换机、路由器和防火墙等能识别 Tag 的设备。Trunk 接口允许多个 VLAN 的数据帧通过，这些数据帧通过 802.1Q Tag 实现区分。</li>
+<li><strong>hybrid 端口</strong>：是 access 端口与 trunk 端口的结合。也允许多个 VLAN 的数据帧通过，这些数据帧通过 802.1Q Tag 实现区分。用户可以灵活指定 Hybrid 接口在发送某个（或某些）VLAN 的数据帧时是否携带 Tag。<strong>华为设备默认的接口类型是 Hybrid。</strong></li>
+</ol>
+<p>本篇重点介绍一下<strong>Access</strong>接口</p>
+<p>我们已经介绍了交换机如何识别数据帧属于哪个 VLAN 以及 VLAN 的划分方式，那交换机对于 Untagged 帧和 Tagged 帧又是如何处理的呢？</p>
+<p><strong>Access 接口特点：</strong>仅允许 VLAN ID 与接口 PVID 相同的数据帧通过。</p>
+<p><strong>Access 接口接收数据帧：</strong></p>
+<p> 当 Access 接口从链路上收到一个 Untagged 帧，交换机会在这个帧中添加上 VID为 PVID 的 Tag，然后对得到的 Tagged 帧进行转发操作（泛洪、转发、丢弃）。</p>
+<p> 当 Access 接口从链路上收到一个 Tagged 帧，交换机会检查这个帧的 Tag 中的VID 是否与 PVID 相同。如果相同，则对这个 Tagged 帧进行转发操作；如果不同，则直接丢弃这个 Tagged 帧。</p>
+<p><strong>Access 接口发送数据帧：</strong></p>
+<p> 当一个 Tagged 帧从本交换机的其他接口到达一个 Access 接口后，交换机会检查这个帧的 Tag 中的 VID 是否与 PVID 相同：</p>
+<p> 如果相同，则将这个 Tagged 帧的 Tag 进行剥离，然后将得到的 Untagged 帧从</p>
+<p>链路上发送出去； 如果不同，则直接丢弃这个 Tagged 帧</p>
+<p> <strong>Access 端口处理数据的方式</strong></p>
+<ol>
+<li>当 Access 端口收到不带 tag 的数据帧时，会打上端口的 PVID 的 tag。</li>
+<li>当 Access 端口接收到 Tagged 帧时，如果该数据帧的 VLAN ID 与端口的 PVID 相同则接收，不同则丢弃。</li>
+<li>当 Access 端口发送时，数据帧中的 VLAN ID 与 PVID 相同则剥离 tag 后发送，如果不同则禁止发送。</li>
+</ol>
+<h2 id="VLAN的技术优势"><a href="#VLAN的技术优势" class="headerlink" title="VLAN的技术优势"></a>VLAN的技术优势</h2><ol>
+<li><p><strong>广播风暴防范</strong></p>
+<p>限制网络上的广播，将网络划分为多个 VLAN 可减少参与广播风暴的设备数量。VLAN分段可以防止广播风暴波及整个网络。VLAN 可以提供建立防火墙的机制，防止交换网络的过量广播。使用 VLAN，可以将某个交换端口或用户赋予某一个特定的 VLAN 组，该 VLAN 组可以在一个交换网中或跨接多个交换机，在一个 VLAN 中的广播不会送到VLAN 之外。同样，相邻的端口不会收到其他 VLAN 产生的广播。这样可以减少广播流量，释放带宽给用户应用，减少广播的产生。</p>
+</li>
+<li><p><strong>安全</strong></p>
+<p>增强局域网的安全性’含有敏感数据的用户组可与网络的其余部分隔离，从而降低泄露机密信息的可能性。不同 VLAN 内的报文在传输时是相互隔离的，即一个 VLAN 内的用户不能和其他 VLAN 内的用户直接通信，如果不同 VLAN 要进行通信，则需要通过路由器或三层交换机等三层设备。</p>
+</li>
+<li><p><strong>成本降低</strong></p>
+<p>成本高昂的网络升级需求减少，现有带宽和上行链路的利用率更高，因而可节约成本。</p>
+</li>
+<li><p><strong>性能提高</strong></p>
+<p>将第二层平面网络划分为多个逻辑工作组(广播域)可以减少网络上不必要的流量并提高性能。</p>
+</li>
+<li><p><strong>提高人员工作效率</strong></p>
+<p>VLAN 为网络管理带来了方便，因为有相似网络需求的用户将共享同一个 VLAN。</p>
+</li>
+<li><p><strong>简化项目管理或应用管理</strong></p>
+<p>VLAN 将用户和网络设备聚合到一起，以支持商业需求或地域上的需求。通过职能划分，项目管理或特殊应用的处理都变得十分方便，例如可以轻松管理教师的电子教学开发平台。此外，也很容易确定升级网络服务的影响范围。</p>
+</li>
+<li><p><strong>增加了网络连接的灵活性</strong></p>
+<p>借助 VLAN 技术，能将不同地点、不同网络、不同用户组合在一起，形成一个虚拟的网络环境，就像使用本地 VLAN 一样方便、灵活、有效。VLAN 可以降低移动或变更工作站地理位置的管理费用，特别是一些业务情况有经常性变动的公司使用了 VLAN 后，这部分管理费用大大降低。</p>
+</li>
+</ol>
+<h2 id="VLAN的部署实验"><a href="#VLAN的部署实验" class="headerlink" title="VLAN的部署实验"></a>VLAN的部署实验</h2><h3 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h3><p>搭建如下拓扑图并划好对应的VLAN，并且让对应VLAN能够正常通信，不同VLAN不能进行通信。</p>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311807951.png" alt="VLAN部署网络拓扑"></p>
+<h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><p>学会创建VLAN、命名VLAN、删除VLAN，将接口划入VLAN。</p>
+<h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><p>首先如图所示配置好PC机的相关ip</p>
+<h4 id="步骤一：创建VLAN"><a href="#步骤一：创建VLAN" class="headerlink" title="步骤一：创建VLAN"></a>步骤一：创建VLAN</h4><blockquote>
+<p>[SW1] vlan 10  &#x2F;&#x2F;创建VLAN10</p>
+<p>[SW1] vlan batch 20 30  &#x2F;&#x2F;批量创建VLAN20和VLAN30</p>
+</blockquote>
+<h4 id="步骤二：在SW1上将接口划入指定的-VLAN"><a href="#步骤二：在SW1上将接口划入指定的-VLAN" class="headerlink" title="步骤二：在SW1上将接口划入指定的 VLAN"></a>步骤二：在SW1上将接口划入指定的 VLAN</h4><blockquote>
+<p>[SW1] int e0&#x2F;0&#x2F;1  &#x2F;&#x2F;进入接口e0&#x2F;0&#x2F;1</p>
+<p>[SW1-Ethernet0&#x2F;0&#x2F;1] port link-type access  &#x2F;&#x2F;配置接口类型为 access 接口</p>
+<p>[SW1-Ethernet0&#x2F;0&#x2F;1] port default vlan 10  &#x2F;&#x2F;配置接口的缺省 vlan 为 10 ，pvid&#x3D;10</p>
+</blockquote>
+<p>用同样的方式将其他三个接口配置对应的VLAN。</p>
+<ul>
+<li>使用指令查看VLAN接口是否划入VLAN当中</li>
+</ul>
+<blockquote>
+<p>dis vlan  &#x2F;&#x2F;查看 vlan 的相关配置</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311811411.png" alt="VLAN相关配置"></p>
+<blockquote>
+<p>dis port vlan  &#x2F;&#x2F;查看接口vlan类型</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311807788.png" alt="VLAN接口类型"></p>
+<h4 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h4><ul>
+<li>PC2ping其他PC的结果，我们发现只有在同一VLAN下的PC4能够ping通，其他VLAN下的PC机无法ping通，说明试验成功。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311807841.png" alt="PC2与其他PC通讯结果"></p>
+<ul>
+<li>PC1ping其他PC的结果，我们发现都ping不通，这是因为VLAN10里面只有PC1这一台PC机，不在同一VLAN下当然ping不通其他的PC机。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuziSAMA/image/main/img/202307311811549.png" alt="PC1与其他PC通讯结果"></p>
+<ul>
+<li>如果发现PC1、PC3都无法与其他PC机通讯，PC2与PC4只能相互通讯，则说明实验成功。</li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><blockquote>
+<p>vlan batch 10 20 30  &#x2F;&#x2F;同时配置 vlan10、20、30</p>
+<p>undo vlan batch 10 20 30  &#x2F;&#x2F;同时删除 vlan10、20、30</p>
+<p>port link-type access  &#x2F;&#x2F;进入接口，配置接口类型为 access，默认是 hybrid</p>
+<p>port default vlan 10  &#x2F;&#x2F;为该接口分配给 vlan10</p>
+<p>display vlan  &#x2F;&#x2F;查看 vlan 的相关配置</p>
+<p>display port vlan  &#x2F;&#x2F;查看接口vlan类型</p>
+<p>port link-type trunk  &#x2F;&#x2F;为接口配置类型为 trunk</p>
+<p>port trunk allow-pass vlan all  &#x2F;&#x2F;允许所有 vlan 通过，默认不允许所有 vlan 通过</p>
+<p>port trunk allow-pass vlan 2 to 4094  &#x2F;&#x2F;允许 vlan 2 到 vlan 4094 通过</p>
+<p>port trunk allow-pass vlan 2 3  &#x2F;&#x2F;允许 VLAN2 和 3 通过</p>
+</blockquote>
 
                 
             </div>
@@ -574,7 +675,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/07/28/lian-lu-ju-he/">http://example.com/2023/07/28/lian-lu-ju-he/</a>
+                    <a href="http://example.com/2023/07/31/jiao-huan-ji-vlan-ji-zhu/">http://example.com/2023/07/31/jiao-huan-ji-vlan-ji-zhu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -787,9 +888,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/07/31/jiao-huan-ji-vlan-ji-zhu/">
                     <div class="card-image">
@@ -806,9 +908,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -821,6 +923,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -843,18 +946,18 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/07/28/tu-wen-guan-li/">
+                <a href="/2023/07/28/lian-lu-ju-he/">
                     <div class="card-image">
                         
-                        <img src="/images/5.jpg" class="responsive-img" alt="typora+PicGo实现文章管理">
+                        <img src="/images/3.jpg" class="responsive-img" alt="链路聚合">
                         
-                        <span class="card-title">typora+PicGo实现文章管理</span>
+                        <span class="card-title">链路聚合</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            写文章怎么能没有编辑器和图片怎么能行！来这里看看如何把图片放进文章吧！
+                            链路聚合是一种能提高网络带宽，提高网络可靠性，实现链路冗余的一种技术手段。
                         
                     </div>
                     <div class="publish-info">
@@ -865,8 +968,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/" class="post-category">
-                                    博客部署
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    网络学习
                                 </a>
                             
                             
@@ -876,12 +979,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/typora/">
-                        <span class="chip bg-color">typora</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/">
+                        <span class="chip bg-color">网络拓扑</span>
                     </a>
                     
-                    <a href="/tags/PicGo/">
-                        <span class="chip bg-color">PicGo</span>
+                    <a href="/tags/eNSP/">
+                        <span class="chip bg-color">eNSP</span>
                     </a>
                     
                 </div>
